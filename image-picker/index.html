@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .container {
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function desain1() {
+            desain_1 = document.getElementById("kreatif");
+            desain_1.style.color = "purple";
+        }
+
+
+        function image_picker() {
+            let pilihan = document.getElementById("option");
+            const list_image = ["alpukat.jpg", "apel.jpg", "chery.jpg", "kiwi.jpg", "orange.jpg", "semangka.jpg"]
+            if(pilihan.value == "alpukat") {
+                let select = list_image[0];
+                document.getElementById("gambar").src = `images/${select}`
+                alert("ini gambar alpukat.jpg")
+                
+            }
+
+            if(pilihan.value == "apel") {
+                let select = list_image[1];
+                document.getElementById("gambar").src = `images/${select}`
+                alert("ini gambar apel.jpg")
+                
+            }
+
+            if(pilihan.value == "chery") {
+                let select = list_image[2];
+                document.getElementById("gambar").src = `images/${select}`
+                alert("ini gambar chery.jpg")
+                
+            }
+
+            if(pilihan.value == "kiwi") {
+                let select = list_image[3]
+                document.getElementById("gambar").src = `images/${select}`
+                alert("ini gambar kiwi.jpg")
+            }
+
+            if(pilihan.value == "orange") {
+                let select = list_image[4]
+                document.getElementById("gambar").src = `images/${select}`
+                alert("ini gambar orange.jpg")
+                
+            }
+
+            if(pilihan.value == "semangka") {
+                let select = list_image[5]
+                document.getElementById("gambar").src = `images/${select}`
+                alert("ini gambar semangka.jpg")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="desain1()" id="Kreatif"><h1>Welcome to Henyati Hasim Image Pikcer</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="image_picker()">
+        <option value=""selected>Pilih Gambar Buah-buahan</option>
+        <option value="alpukat">alpukat</option>
+        <option value="apel">apel</option>
+        <option value="chery">chery</option>
+        <option value="kiwi">kiwi</option>
+        <option value="orange">orange</option>
+        <option value="semangka">semangka</option>
+    </select>
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="gambar">
+        </div>
+    </div>
+</body>
+</html>
